@@ -400,6 +400,6 @@ public class LinkTester {
       }
 
       assertEquals("toString incorrect for invalid link.", link1.toString(), "Invalid Link: Unitialized IDs");
-      assertEquals("toString incorrect.", link2.toString(), "The link between xyz456 and abc123\nLink established on 2000.01.01\nLink torn down on 2000.02.02\nLink established on 2000.02.02\nLink torn down on 2000.02.14\nLink established on 2000.03.03\nLink torn down on 2000.03.04");
+      assertEquals("toString incorrect.", link2.toString(), "The link between abc123 and xyz456\nLink established on 2000.01.01\nLink torn down on 2000.02.02\nLink established on 2000.02.02\nLink torn down on 2000.02.14\nLink established on 2000.03.03\nLink torn down on 2000.03.04");
    }
 }

@@ -20,15 +20,16 @@ default: classes
 
 classes: $(CLASSES:.java=.class)
 
-TESTS = UserTester.java \
-	FriendTester.java \
-	LinkTester.java \
-	SocialNetworkTester.java
+TESTS = ./Tests/UserTester.java \
+	./Tests/FriendTester.java \
+	./Tests/LinkTester.java \
+	./Tests/SocialNetworkTester.java
 
 test:
-	javac -cp junit-4.10.jar:. $(TESTS)
-	java -cp junit-4.10.jar:. org.junit.runner.JUnitCore $(TESTS:.java=)
+	javac -cp ./Tests/junit-4.10.jar:. $(TESTS)
+	java -cp ./Tests/junit-4.10.jar:Tests:. org.junit.runner.JUnitCore $(notdir $(TESTS:.java=))
 
 
 clean:
 	$(RM) *.class
+	$(RM) ./Tests/*.class
